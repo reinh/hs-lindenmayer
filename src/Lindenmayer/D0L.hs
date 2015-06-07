@@ -8,14 +8,14 @@
 --     * ω is the axiom (starting state)
 --     * P is the set of rules
 --
+-- A /deterministic/ L-system is one where there is only one
+-- production rule for each letter in the alphabet. A /context-free/
+-- L-system is one where the production rule looks only at the given
+-- letter, not at any of its neighbors.
+--
 -- Here, V is given by the inhabitants of @a@, ω by an @m@-container
--- of @a@, and P by a Kleisli arrow @a -> m a@.
---
--- A /deterministic/ L-system is one where there is only one production
--- rule for each letter in the alphabet.
---
--- A /context-free/ L-system is one where the production rule looks only
--- at the given letter, not at any of its neighbors.
+-- of @a@, and P by a Kleisli arrow @a -> m a@. When @m@ is @[]@, this
+-- is the usual notion of an L-system.
 --
 -- The original L-system used to model the growth of algae can be given by
 --
