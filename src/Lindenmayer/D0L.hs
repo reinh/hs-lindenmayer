@@ -1,6 +1,6 @@
 {-# LANGUAGE FlexibleContexts #-}
 
--- | An D0L is a /deterministic/, /context-free/ /L-system/.
+-- | A D0L is a /deterministic/, /context-free/ /L-system/.
 --
 -- An /L-system/ is a tuple L = (V, ω, P) where
 --
@@ -8,8 +8,8 @@
 --     * ω is the axiom (starting state)
 --     * P is the set of rules
 --
--- Here, V is given by the inhabitants of @a@, ω by an @f@-container
--- of @a@, and P by Kleisli arrows @a -> f a@.
+-- Here, V is given by the inhabitants of @a@, ω by an @m@-container
+-- of @a@, and P by a Kleisli arrow @a -> m a@.
 --
 -- A /deterministic/ L-system is one where there is only one production
 -- rule for each letter in the alphabet.
@@ -26,7 +26,7 @@
 -- >   where rules A = [A,B]
 -- >         rules B = [A]
 --
--- We can demonstrate that the lengths of the generated strings gives
+-- We can demonstrate that the lengths of the generated strings give
 -- the fibonacci sequence:
 --
 -- >>> print . map (length . axiom) . take 7 . generate $ algae
