@@ -54,4 +54,4 @@ generate = iterate step
 -- resulting string becomes the axiom of a new `D0L` with the same
 -- rules.
 step :: Monad m => D0L m a -> D0L m a
-step (D0L rules state) = D0L rules (state >>= rules)
+step (D0L k ma) = D0L k (ma >>= k)
